@@ -30,9 +30,11 @@ namespace ScheduledTaskMonitor.Controllers
         }
         public ActionResult _SidebarModel()
         {
-            String[] items = { "Item1", "Item2", "Item3", "Item4" };
-
-            return PartialView(new SidebarModel(items));
+            TaskManagementEntities taskEntities = new TaskManagementEntities();
+            return PartialView(new SidebarModel(
+                taskEntities.TaskInfoNames,
+                taskEntities.MachineInfoNames
+             ));
         }
 
         public ActionResult Contact()

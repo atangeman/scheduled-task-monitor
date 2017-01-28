@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ScheduledTaskMonitor.Models.TaskInfo>
+
+@{
+    ViewBag.Title = "TaskList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TaskList</h2>
+
+<p>
+    @Html.ActionLink("Add/Connect to Task", "Add")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskGUID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Created)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskGUID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Created)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TaskInfoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TaskInfoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TaskInfoId })
+        </td>
+    </tr>
+}
+
+</table>

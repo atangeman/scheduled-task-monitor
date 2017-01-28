@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ScheduledTaskMonitor.Models.MachineInfo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Add New", "Add")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineHostName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineIPv4Address)
+        </th>       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MachineHostName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MachineIPv4Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MachineInfoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MachineInfoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MachineInfoId })
+        </td>
+    </tr>
+}
+
+</table>

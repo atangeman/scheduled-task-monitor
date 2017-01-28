@@ -25,5 +25,14 @@ namespace ScheduledTaskMonitor.Models
         public int UserID { get; set; }
 
         public DateTime Date_Created { get; set; }
+
+        public TaskInfo() { }
+        public TaskInfo(Microsoft.Win32.TaskScheduler.Task t)
+        {
+            TaskName = t.Name;
+            TaskDescription = t.Definition.RegistrationInfo.Description;
+            TaskGUID = "NONE";
+            UserID = 0; //ToDo: Make userid hash                          
+        }
     }
 }

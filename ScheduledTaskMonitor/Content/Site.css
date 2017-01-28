@@ -5,8 +5,10 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 80%;
+    height: 100%;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -20,7 +22,7 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 280px
 }
 
     body,html{
@@ -48,7 +50,7 @@ textarea {
 
 	/* Add gap to nav and right windows.*/
 	.main{
-		padding: 10px 10px 0 10px;
+		padding: 10px 10px 0 50px;
 	}
 
 	/* .....NavBar: Icon only with coloring/layout.....*/

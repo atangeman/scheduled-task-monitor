@@ -184,21 +184,24 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MachineManagementController.cs" />
+    <Compile Include="Controllers\TaskManagementController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModel.cs" />
+    <Compile Include="Models\MachineInfo.cs" />
+    <Compile Include="Models\TaskManagementEntities.cs" />
     <Compile Include="Models\SidebarModel.cs" />
     <Compile Include="Models\TaskInfo.cs" />
-    <Compile Include="Models\TaskInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup..cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\TaskUserData.mdf" />
-    <Content Include="App_Data\TaskUserData_log.ldf">
-      <DependentUpon>TaskUserData.mdf</DependentUpon>
+    <Content Include="App_Data\TaskManagementData.mdf" />
+    <Content Include="App_Data\TaskManagementData_log.ldf">
+      <DependentUpon>TaskManagementData.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -237,6 +240,9 @@
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
     <Content Include="Views\Home\_SidebarModel.cshtml" />
+    <Content Include="Views\TaskManagement\TaskList.cshtml" />
+    <Content Include="Views\MachineManagement\Add.cshtml" />
+    <Content Include="Views\MachineManagement\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -249,6 +255,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
