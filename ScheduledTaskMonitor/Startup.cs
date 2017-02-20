@@ -20,6 +20,5 @@ namespace ScheduledTaskMonitor
                 LoginPath = new PathString("/User/Login")
             });
         }
-
     }
 }

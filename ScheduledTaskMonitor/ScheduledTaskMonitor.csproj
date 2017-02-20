@@ -196,7 +196,7 @@
     <Compile Include="Models\SidebarModel.cs" />
     <Compile Include="Models\TaskInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup..cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\TaskManagementData.mdf" />
